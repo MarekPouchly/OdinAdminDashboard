@@ -1,0 +1,31 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.side-menu {
+    background: rgb(0, 157, 255);
+    color: white;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.side-menu li {
+    padding: .8rem;
+}
+
+main {
+    background: grey;
+}
+
+.mdi {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
