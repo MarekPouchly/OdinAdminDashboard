@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1.3fr 6fr;
 }
 
 .side-menu {
@@ -50,4 +50,100 @@ main {
 .mdi {
     font-size: 1.5rem;
     margin-right: 1rem;
+}
+
+/*
+*   HEADER
+*/
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    background: #fff;
+}
+
+.profile-photo {
+    background: rgb(233, 210, 0);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.top-menu, .bottom-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 4rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.search-bar .mdi {
+    font-size: 1.8rem;
+}
+
+.search-bar input {
+    width: 45rem;
+    height: 2rem;
+    background: #ddd;
+    border: none;
+    border-radius: 1.5rem;
+    padding: .3rem 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile .mdi {
+    margin-right: 0;
+}
+
+.profile .mdi, .profile .profile-photo, .profile h2 {
+    margin: 1rem;
+}
+
+.bottom-menu .meet {
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.meet .profile-photo {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+.bottom-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.bottom-menu li {
+    font-weight: bold;
+    background: rgb(0, 157, 255);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.hello-user p, .hello-user h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.hello-user p {
+    font-size: .9rem;
+    margin-bottom: .3rem;
+}
+
+.hello-user h3 {
+    font-size: 1.5rem;
 }
