@@ -413,6 +413,11 @@ header, .card, .latest-announcements, .trend-profiles {
 }
 
 @media screen and ( max-width: 1240px ) {
+
+    header {
+        grid-template-rows: 1fr 1fr;
+    }
+
     .main-content {
         display: grid;
         grid-template-columns: 1.5fr 1fr;
@@ -443,7 +448,7 @@ header, .card, .latest-announcements, .trend-profiles {
     }
 }
 
-@media screen and ( max-width: 1015px ) {
+@media screen and ( max-width: 1040px ) {
     .top-menu {
         display: none;
     }
