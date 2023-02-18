@@ -13,12 +13,12 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-self: flex-start;
 
     font-weight: bold;
     
     font-size: .9rem;
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 2rem 1rem 0.8rem;
 }
 
 .logo span {
@@ -325,17 +325,23 @@ aside .section-heading {
 }
 
 /*
-*  Trending
+*  TRENDING
 */
 
 .trend-profiles {
     padding: 0.8rem;
+    margin-bottom: 2rem;
 }
 
 .trend-user {
     display: flex;
     align-items: center;
     padding: 0.8rem;
+}
+
+.trend-user .profile-photo {
+    min-width: 3rem;
+    min-height: 3rem;
 }
 
 .trend-user:hover, .trend-user:focus {
@@ -386,4 +392,109 @@ aside .section-heading {
 
 header, .card, .latest-announcements, .trend-profiles {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+}
+
+/*
+*
+*   MEDIA QUERIES
+*
+*/
+
+@media screen and ( max-width: 1450px ) {
+    body {
+        grid-template-columns: 5.4rem 6fr;
+    }
+
+    .logo h1,
+    .user-menu li > :last-child,
+    .settings-privacy li > :last-child {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 1240px ) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .meet .profile-photo {
+        width: 3rem;
+        min-width: 3rem;
+        height: 3rem;
+    }
+
+    .hello-user h3 {
+        font-size: 1.2rem;
+    }
+
+    .bottom-menu li {
+        padding: 0.7rem 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .profile h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and ( max-width: 1015px ) {
+    .top-menu {
+        display: none;
+    }
+
+    header {
+        grid-template-rows: 1fr;
+    }
+
+    .bottom-menu {
+        padding: 1rem 0;
+        justify-content: flex-end;
+    }
+
+    .bottom-menu .meet {
+        display: grid;
+        grid-template-areas: "name photo";
+    }
+
+    .meet .profile-photo {
+        grid-area: photo;
+    }
+
+    .meet .hello-user {
+        grid-area: name;
+
+        text-align: right;
+        margin-right: 1rem;
+    }
+
+    .bottom-menu nav {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 955px ) {
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-content aside {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 850px ) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }
