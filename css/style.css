@@ -6,7 +6,7 @@ body {
 }
 
 .side-menu {
-    background: rgb(0, 157, 255);
+    background: #1a92d3;
     color: white;
 }
 
@@ -16,8 +16,7 @@ body {
     font-size: .9rem;
     align-items: center;
     margin-bottom: 2rem;
-    padding-top: 1rem;
-    padding-left: .8rem;
+    padding: 1rem 1rem 0 .8rem;
 }
 
 .logo span {
@@ -44,7 +43,7 @@ body {
 }
 
 main {
-    background: grey;
+    background: #e2e8f0;
 }
 
 .mdi {
@@ -89,7 +88,7 @@ header {
 .search-bar input {
     width: 45rem;
     height: 2rem;
-    background: #ddd;
+    background: #e2e8f0;
     border: none;
     border-radius: 1.5rem;
     padding: .3rem 1rem;
@@ -128,7 +127,7 @@ header {
 
 .bottom-menu li {
     font-weight: bold;
-    background: rgb(0, 157, 255);
+    background: #1a92d3;
     color: #fff;
     padding: 1rem 2.5rem;
     border-radius: 1.5rem;
@@ -146,4 +145,70 @@ header {
 
 .hello-user h3 {
     font-size: 1.5rem;
+}
+
+/*
+ *
+ * MAIN CONTENT
+ *
+ */
+
+/*
+ * Your Projects
+ */
+
+#projects-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 2rem 0 1rem 1.5rem;
+    margin: 0;
+ }
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+.card {
+    background: #fff;
+    border-left: 0.5rem solid #f0b42a;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    padding-bottom: 0;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card .heading {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.card p {
+    color: #898989;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.links {
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.links li {
+    display: inline-block;
+    padding: .6rem;
+}
+
+.links a {
+    color: #000;
+}
+
+.links a:hover, .links a:focus {
+    color: #1a92d3;
+    transition: 0.2s all ease-in-out;
 }
