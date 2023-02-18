@@ -153,11 +153,20 @@ header {
  *
  */
 
+.main-content {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
 /*
  * Your Projects
  */
 
-#projects-heading {
+.your-projects {
+    padding-right: 1.5rem;
+}
+
+.section-heading {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 2rem 0 1rem 1.5rem;
@@ -170,13 +179,17 @@ header {
  }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     background: #fff;
+    
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    margin: 0 0 2rem 2rem;
+
     border-left: 0.5rem solid #f0b42a;
     border-radius: 0.5rem;
-    padding: 0.5rem;
-    padding-bottom: 0;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .card .heading {
@@ -186,17 +199,18 @@ header {
 }
 
 .card p {
-    color: #898989;
+    color: #636363;
     font-size: 0.9rem;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .links {
     list-style-type: none;
     text-align: right;
     padding: 0;
-    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+    margin: 0;
 }
 
 .links li {
@@ -211,4 +225,55 @@ header {
 .links a:hover, .links a:focus {
     color: #1a92d3;
     transition: 0.2s all ease-in-out;
+}
+
+/*
+*
+*   ASIDE 
+*
+*/
+
+aside {
+    padding-right: 2.5rem;
+}
+
+/*
+*  Announcements
+*/
+
+.announcements .section-heading {
+    padding-left: 0;
+}
+
+.latest-announcements {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.announcement {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.announcement:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.announcement h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.announcement p {
+    font-size: 0.85rem;
+    color: #636363;
+    margin-top: 0;
+}
+
+.announcement:last-child p {
+    margin: 0;
 }
