@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1.3fr 6fr;
+    grid-template-columns: 1fr 6fr;
 }
 
 .side-menu {
@@ -12,11 +12,13 @@ body {
 
 .logo {
     display: flex;
-    font-weight: bold;
-    font-size: .9rem;
     align-items: center;
-    margin-bottom: 2rem;
-    padding: 1rem 1rem 0 .8rem;
+    justify-content: center;
+
+    font-weight: bold;
+    
+    font-size: .9rem;
+    padding: 2rem 2rem 1rem;
 }
 
 .logo span {
@@ -37,9 +39,19 @@ body {
     font-weight: bold;
 }
 
+.user-menu {
+    margin-bottom: 3rem;
+}
+
 .side-menu li {
-    padding: .7rem;
-    padding-left: 1.3rem;
+    padding: 1rem 0 1rem 1.5rem;
+}
+
+.side-menu li:hover, .side-menu li:hover {
+    background: #2d9fdc;
+    border-left: 4px solid #f0b42a;
+
+    transition: .2s all ease-in-out;
 }
 
 main {
@@ -48,7 +60,7 @@ main {
 
 .mdi {
     font-size: 1.5rem;
-    margin-right: 1rem;
+    padding: 0.4rem;
 }
 
 /*
@@ -62,10 +74,15 @@ header {
 }
 
 .profile-photo {
+    display: block;
     background: rgb(233, 210, 0);
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+}
+
+.top-menu {
+    margin-top: 1rem;
 }
 
 .top-menu, .bottom-menu {
@@ -76,17 +93,22 @@ header {
 }
 
 .search-bar {
+    width: clamp(10rem, 50%, 50rem);
     display: flex;
     align-items: center;
     padding-left: 3rem;
+    margin-top: -0.1rem;
 }
 
 .search-bar .mdi {
     font-size: 1.8rem;
+    position: relative;
+    top: 0.8px;
+    margin-right: 1rem;
 }
 
 .search-bar input {
-    width: 45rem;
+    width: 100%;
     height: 2rem;
     background: #e2e8f0;
     border: none;
@@ -101,9 +123,16 @@ header {
 
 .profile .mdi {
     margin-right: 0;
+    padding: 0.6rem;
 }
 
-.profile .mdi, .profile .profile-photo, .profile h2 {
+.profile .mdi:hover, .profile .mdi:focus {
+    background: #eee;
+    border-radius: 0.5rem;
+    transition: 0.2s all ease-in-out;
+} 
+
+.profile .profile-photo, .profile h2 {
     margin: 1rem;
 }
 
@@ -115,6 +144,7 @@ header {
 
 .meet .profile-photo {
     width: 5rem;
+    min-width: 5rem;
     height: 5rem;
     margin-right: 1rem;
 }
@@ -131,6 +161,11 @@ header {
     color: #fff;
     padding: 1rem 2.5rem;
     border-radius: 1.5rem;
+}
+
+.bottom-menu li:hover, .bottom-menu li:focus {
+    background: #2d9fdc;
+    transition: 0.2s all ease;
 }
 
 .hello-user p, .hello-user h3 {
@@ -190,6 +225,8 @@ header {
 
     border-left: 0.5rem solid #f0b42a;
     border-radius: 0.5rem;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .card .heading {
@@ -215,25 +252,31 @@ header {
 
 .links li {
     display: inline-block;
-    padding: .6rem;
+    margin-right: 0.6rem;
+}
+
+.links li:last-child {
+    margin-right: 0;
 }
 
 .links a {
     color: #000;
+    padding: 1rem 0.2rem 0.6rem;
 }
 
 .links a:hover, .links a:focus {
-    color: #1a92d3;
     transition: 0.2s all ease-in-out;
+    background: #eee;
+    border-radius: 0.5rem;
 }
 
 /*
 *
-*   ASIDE 
+*   MAIN CONTENT ASIDE 
 *
 */
 
-aside {
+.main-content aside {
     padding-right: 2.5rem;
 }
 
@@ -241,14 +284,17 @@ aside {
 *  Announcements
 */
 
-.announcements .section-heading {
+aside .section-heading {
     padding-left: 0;
 }
 
-.latest-announcements {
+.latest-announcements, .trend-profiles {
     background: #fff;
-    padding: 2.5rem;
     border-radius: 0.5rem;
+}
+
+.latest-announcements {
+    padding: 2.5rem;
 }
 
 .announcement {
@@ -276,4 +322,68 @@ aside {
 
 .announcement:last-child p {
     margin: 0;
+}
+
+/*
+*  Trending
+*/
+
+.trend-profiles {
+    padding: 0.8rem;
+}
+
+.trend-user {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+.trend-user:hover, .trend-user:focus {
+    background: #eee;
+    border-radius: 0.5rem;
+    transition: 0.2s all ease-in-out;
+}
+
+.trend-user:last-child {
+    margin-bottom: 0;
+}
+
+#first-user .profile-photo {
+    background: pink;
+}
+
+#second-user .profile-photo {
+    background: lightgreen;
+}
+
+#third-user .profile-photo {
+    background: lightblue;
+}
+
+#fourth-user .profile-photo {
+    background: lightslategray;
+}
+
+.who {
+    margin-left: 1rem;
+}
+
+.who .tag, .who span {
+    font-size: 1rem;
+}
+
+.tag {
+    margin: 0.2rem;
+}
+
+.who span {
+    color: #636363;
+}
+
+/*
+*   BOX SHADOW
+*/
+
+header, .card, .latest-announcements, .trend-profiles {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
 }
